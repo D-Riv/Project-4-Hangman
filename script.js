@@ -33,6 +33,15 @@ function generateButtons() {
   }
   keypadInit.removeEventListener("click", generateButtons);
 
+  keypadInit.addEventListener("click", removeButtons);
+  function removeButtons() {
+    let newKeypad = document.querySelectorAll(".letter")
+    for(let i = 0; i < newKeypad.length; i++) {
+    keypad.removeChild(newKeypad[i]);
+    console.log(newKeypad);
+
+    }
+  }
 }
 
 
