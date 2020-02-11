@@ -29,6 +29,6 @@ button {
 .score-name {
   text-align: end;
 }
-.restart {
-  
+.keypad {
+  display: none;
 }
