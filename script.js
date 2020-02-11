@@ -1,14 +1,20 @@
 //Test game functionality
 let wordsArr = [
-  "JavaScript",
-  "Github",
-  "Responsive"
+  "javascript",
+  "github",
+  "git",
+  "responsive",
+  "flexbox",
+  "grid",
+  "react",
+  "asynchronous"
 ];
 let answer = " ";
 let incorrect = 6;
 
 function randomWord() {
   let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
+  console.log(answer);
 }
 randomWord();
 
@@ -21,6 +27,7 @@ function generateButtons() {
   for(let i = 0; i < buttons.length; i++) {
     let newKeypad = document.createElement("button");
     newKeypad.classList.add("letter");
+    newKeypad.innerHTML = buttons[i];
     keypad.appendChild(newKeypad);
   // newKeypad.appendChild(buttons[i]);
   }
