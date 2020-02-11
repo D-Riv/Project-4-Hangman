@@ -10,3 +10,15 @@ main {
 button {
   margin: 30px;
 }
+.display-game {
+  /* display: ; */
+  position: fixed;
+  z-index: 1;
+  /* left: 0%; */
+  /* top: 0; */
+  width: 500px;
+  height: 100px;
+  overflow: auto;
+  padding: 100px;
+  border: 1px solid #000000;
+}
