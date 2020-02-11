@@ -1,4 +1,4 @@
-//Test game functionality
+//Array of random words
 let wordsArr = [
   "javascript",
   "github",
@@ -9,15 +9,36 @@ let wordsArr = [
   "react",
   "asynchronous"
 ];
-let answer = " ";
+// let answer = " ";
 let incorrect = 6;
 
+//pick random word from array
 function randomWord() {
   let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
   console.log(answer);
+
+//generate hidden word length character into html"_"
+  for(let i = 0; i < answer.length; i++) {
+    let guessWord = document.createElement("p");
+    guessWord.classList.add("letter");
+    guessWord.innerHTML = "_"
+    let randomWord = document.querySelector(".random-word");
+    randomWord.appendChild(guessWord);
+
+  }
+
+
 }
 randomWord();
 
+
+
+
+
+
+
+
+//Ability to initialize and remove keypad
 let keypadInit = document.querySelector(".keypad-activator");
 let keypad = document.querySelector(".keypad");
 
@@ -38,10 +59,10 @@ function generateButtons() {
     let newKeypad = document.querySelectorAll(".letter")
     for(let i = 0; i < newKeypad.length; i++) {
     keypad.removeChild(newKeypad[i]);
-    console.log(newKeypad);
-
     }
   }
 }
+
+
 
 
