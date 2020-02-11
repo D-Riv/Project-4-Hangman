@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   text-align: center;;
 }
@@ -17,8 +21,14 @@ button {
   /* left: 0%; */
   /* top: 0; */
   width: 500px;
-  height: 100px;
+  height: 400px;
   overflow: auto;
-  padding: 100px;
+  /* padding: 100px; */
   border: 1px solid #000000;
+}
+.score-name {
+  text-align: end;
+}
+.restart {
+  
 }
