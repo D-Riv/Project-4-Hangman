@@ -9,18 +9,20 @@ let wordsArr = [
   "react",
   "asynchronous"
 ];
-// let answer = " ";
 let incorrect = 6;
 
+
 //pick random word from array
-function randomWord() {
-  let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
+let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
   console.log(answer);
+let spread = answer.split("")
+console.log(spread);
 
 //generate hidden word length character into "_"
-  for(let i = 0; i < answer.length; i++) {
+function randomWord() {
+  for(let i = 0; i < spread.length; i++) {
     let guessWord = document.createElement("p");
-    guessWord.classList.add("letter");
+    guessWord.classList.add("unknown", spread[i]);
     guessWord.innerHTML = "_"
     let randomWord = document.querySelector(".random-word");
     randomWord.appendChild(guessWord);
@@ -66,15 +68,27 @@ function restartGame() {
   location.reload(displayGame);
 }
 
+// console.log(answer.split("").value);
+
 //Game logic upon keypad click
 let letters = document.querySelectorAll(".letter");
+let unknown = document.querySelectorAll(".unknown");
+
 for(let i = 0; i < letters.length; i++) {
   letters[i].addEventListener("click", click);
   function click() {
     console.log(letters[i].value);
+    for(let i = 0; i < spread.length, i < unknown.length; i++) {
+      if(letters[i].value === spread[i].value) {
+        unknown[i].innerHTML = spread[i].value;
+      }
+    }
+    
+
+
+
   }
 }
-
 
 
 
