@@ -38,6 +38,7 @@ function generateButtons() {
   for(let i = 0; i < buttons.length; i++) {
     let newButton = document.createElement("button");
     newButton.classList.add("letter");
+    newButton.value =buttons[i]
     newButton.innerHTML = buttons[i];
     keypad.appendChild(newButton);
   // newButton.appendChild(buttons[i]);
@@ -57,10 +58,6 @@ function generateDisplay() {
 }
 
 
-
-
-
-
 //restart game
 let displayGame = document.querySelector(".display-game")
 let restart = document.querySelector(".restart");
@@ -69,6 +66,14 @@ function restartGame() {
   location.reload(displayGame);
 }
 
+//Game logic upon keypad click
+let letters = document.querySelectorAll(".letter");
+for(let i = 0; i < letters.length; i++) {
+  letters[i].addEventListener("click", click);
+  function click() {
+    console.log(letters[i].value);
+  }
+}
 
 
 
