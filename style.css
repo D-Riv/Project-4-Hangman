@@ -16,15 +16,20 @@ button {
 }
 .display-game {
   /* display: ; */
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
   /* left: 0%; */
   /* top: 0; */
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 600px;
   overflow: auto;
-  /* padding: 100px; */
+  padding: 200px 100px;
   border: 1px solid #000000;
+}
+.main-game {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
 }
 .score-name {
   text-align: end;
@@ -32,3 +37,8 @@ button {
 .keypad {
   display: none;
 }
+.random-word {
+  display: flex;
+  justify-content: space-evenly;
+}
+
