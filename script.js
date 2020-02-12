@@ -74,31 +74,37 @@ function restartGame() {
 //Game logic upon keypad click
 let letters = document.querySelectorAll(".letter");
 let unknown = document.querySelectorAll(".unknown");
-let unknownArr = [];
+// let unknownArr = [];
 
-for(let i = 0; i < unknown.length; i++) {
-console.log(unknownArr.push(unknown[i].title));
 
-}
+// for(let i = 0; i < spread.length; i++) {
+// unknownArr.push(spread[i]);
+// }
+// console.log(unknownArr);
+
 
 for(let i = 0; i < letters.length; i++) {
   letters[i].addEventListener("click", click);
-  function click() {
-    console.log(letters[i].value);
-    
-    
-      // if(letters[i].value === Array.from(unknown[i].title)) {
-      //   unknown[i].title.innerHTML = letters[i].value;
-      //   console.log("It works!");
-      
-      //   } else {
-      //     console.log("not yet buddy");
-      //   }
-    }
+  
 
 
   }
+  function click(e) {
+    console.log(e.target.value);
+    
+    for(let i = 0; i < spread.length; i++) {
+      if(e.target.value === spread[i]) {
+        unknown[i].innerHTML = e.target.value;
+        console.log("It works!");
+      
+        } else if() {
 
+        } else {
+          console.log("not yet buddy");
+        }
+    }
+      
+    }
 
 
  
