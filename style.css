@@ -23,22 +23,32 @@ button {
   width: 700px;
   height: 600px;
   overflow: auto;
-  padding: 200px 100px;
+  padding: 50px 100px;
   border: 1px solid #000000;
-}
-.main-game {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
 }
 .score-name {
   text-align: end;
+  margin-bottom: 100px;
 }
-.keypad {
-  display: none;
+.main-game {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+.hangman-image {
+  width: 200px;
+  height: 200px;
 }
 .random-word {
   display: flex;
   justify-content: space-evenly;
 }
+.letter {
+  margin: 10px;
+}
+
+.keypad {
+  display: none;
+}
+
 
