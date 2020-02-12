@@ -22,7 +22,8 @@ console.log(spread);
 function randomWord() {
   for(let i = 0; i < spread.length; i++) {
     let guessWord = document.createElement("p");
-    guessWord.classList.add("unknown", spread[i]);
+    guessWord.classList.add("unknown");
+    guessWord.title = spread[i];
     guessWord.innerHTML = "_"
     let randomWord = document.querySelector(".random-word");
     randomWord.appendChild(guessWord);
@@ -73,25 +74,34 @@ function restartGame() {
 //Game logic upon keypad click
 let letters = document.querySelectorAll(".letter");
 let unknown = document.querySelectorAll(".unknown");
+let unknownArr = [];
+
+for(let i = 0; i < unknown.length; i++) {
+console.log(unknownArr.push(unknown[i].title));
+
+}
 
 for(let i = 0; i < letters.length; i++) {
   letters[i].addEventListener("click", click);
   function click() {
     console.log(letters[i].value);
-    for(let i = 0; i < spread.length, i < unknown.length; i++) {
-      if(letters[i].value === spread[i].value) {
-        unknown[i].innerHTML = spread[i].value;
-      }
-    }
     
-
+    
+      // if(letters[i].value === Array.from(unknown[i].title)) {
+      //   unknown[i].title.innerHTML = letters[i].value;
+      //   console.log("It works!");
+      
+      //   } else {
+      //     console.log("not yet buddy");
+      //   }
+    }
 
 
   }
-}
 
 
 
+ 
 
 
 
