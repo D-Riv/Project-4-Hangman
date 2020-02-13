@@ -69,7 +69,6 @@ function restartGame() {
   location.reload(displayGame);
 }
 
-// console.log(answer.split("").value);
 
 //Game logic upon keypad click
 let letters = document.querySelectorAll(".letter");
@@ -85,26 +84,19 @@ let unknown = document.querySelectorAll(".unknown");
 
 for(let i = 0; i < letters.length; i++) {
   letters[i].addEventListener("click", click);
-  
-
-
   }
-  function click(e) {
-    console.log(e.target.value);
+function click(e) {
+  console.log(e.target.value);
     
-    for(let i = 0; i < spread.length; i++) {
-      if(e.target.value === spread[i]) {
-        unknown[i].innerHTML = e.target.value;
-        console.log("It works!");
-      
-        } else if() {
-
-        } else {
+  for(let i = 0; i < spread.length; i++) {
+    if(e.target.value === spread[i]) {
+      unknown[i].innerHTML = e.target.value;
+      console.log("It works!"); 
+      }else {
           console.log("not yet buddy");
-        }
-    }
-      
-    }
+      }
+    } 
+  }
 
 
  
