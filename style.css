@@ -12,15 +12,7 @@ body {
   background-image: url(images/clouds2.jpg);
 	animation: animatedBackground 30s linear infinite;
 }
-header {
-  padding: 200px;
-  /* padding-top:150px; */
-}
-main {
-  /* padding: 50px; */
-  z-index: 1;
 
-}
 button {
   margin: 30px;
 }
@@ -32,13 +24,29 @@ button {
     transform: translateY(0);
   }
 }
-.title-page {
+.container {
   /* background-color:#7be1ff; */
   /* width: 560px;  */
 	/* height: 400px;  */
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-  animation: 1s ease-out 0s 1 slideInFromTop;
+  animation: 5s ease-out 0s 1 slideInFromTop;
+}
+.game-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 110px;
+  background-color: #dfae7c;
+  margin: 150px 100px 0 100px;
+  padding: 50px;
+  box-sizing: border-box;
+	border: 10px dashed #B25900;
+	border-radius: 2%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  
 }
 .start-button {
   color: #000000;
@@ -49,10 +57,13 @@ button {
   border: 1px solid #ffffff;
   background-color: #ffffff;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	transform: translatey(0px);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  
 }
 .start-button:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
+  background-color: gray; 
 }
 @keyframes float {
 	0% {
@@ -68,22 +79,6 @@ button {
 		transform: translatey(0px);
   }
 }
-.game-title {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  background-color: #dfae7c;
-  /* width: 100%; */
-  box-sizing: border-box;
-	border: 10px dashed #B25900;
-	border-radius: 2%;
-	overflow: hidden;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	transform: translatey(0px);
-  animation: float 6s ease-in-out infinite;
-  
-}
-
 .display-game {
   /* display: none; */
   position: fixed;

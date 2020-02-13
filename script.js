@@ -94,11 +94,11 @@ function click(e) {
     if(e.target.value === spread[i]) {
       unknown[i].innerHTML = e.target.value;
       console.log("It works!"); 
-      }else if (e.target.value !== spread && spread.indexof(e.target.value) > -1) {
-        // wrongAnswer.push();
-        // score.innerHTML = guessesLeft - 1;
-        console.log(wrongAnswer);
-        return;
+      // }else if (e.target.value !== spread && spread.indexof(e.target.value) > -1) {
+      //   // wrongAnswer.push();
+      //   // score.innerHTML = guessesLeft - 1;
+      //   console.log(wrongAnswer);
+      //   return;
 
         
       }else {
