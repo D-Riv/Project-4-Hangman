@@ -94,7 +94,7 @@ function click(e) {
       unknown[i].innerHTML = e.target.value;
       console.log("It works!"); 
       }else if (e.target.value !== spread[i]) {
-        guessesLeft = guessesLeft - 1;
+        score.innerHTML = guessesLeft - 1;
         console.log(guessesLeft);
       }else {
         
