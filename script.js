@@ -9,22 +9,30 @@ let wordsArr = [
   "react",
   "asynchronous"
 ];
-let guessesLeft = 6;
+let correctAnswers = [];
+let incorrectAnswers = [];
+let incorrectGuessesLeft = 6;
 let score = document.querySelector(".score");
-score.innerHTML = guessesLeft;
+score.innerHTML = incorrectGuessesLeft;
 
-//pick random word from array
+//generate random word from words array
 let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
   console.log(answer);
-let spread = answer.split("")
-console.log(spread);
+let randomWordArr = answer.split("")
+console.log(randomWordArr);
+
+
+
+
+
+
 
 //generate hidden word length character into "_"
 function randomWord() {
-  for(let i = 0; i < spread.length; i++) {
+  for(let i = 0; i < randomWordArr.length; i++) {
     let guessWord = document.createElement("p");
     guessWord.classList.add("unknown");
-    guessWord.title = spread[i];
+    guessWord.title = randomWordArr[i];
     guessWord.innerHTML = "_"
     let randomWord = document.querySelector(".random-word");
     randomWord.appendChild(guessWord);
@@ -77,8 +85,8 @@ let unknown = document.querySelectorAll(".unknown");
 // let unknownArr = [];
 
 
-// for(let i = 0; i < spread.length; i++) {
-// unknownArr.push(spread[i]);
+// for(let i = 0; i < randomWordArr.length; i++) {
+// unknownArr.push(randomWordArr[i]);
 // }
 // console.log(unknownArr);
 
@@ -90,13 +98,13 @@ for(let i = 0; i < letters.length; i++) {
 function click(e) {
   console.log(e.target.value);
     
-  for(let i = 0; i < spread.length; i++) {
-    if(e.target.value === spread[i]) {
+  for(let i = 0; i < randomWordArr.length; i++) {
+    if(e.target.value === randomWordArr[i]) {
       unknown[i].innerHTML = e.target.value;
       console.log("It works!"); 
-      // }else if (e.target.value !== spread && spread.indexof(e.target.value) > -1) {
+      // }else if (e.target.value !== randomWordArr && randomWordArr.indexof(e.target.value) > -1) {
       //   // wrongAnswer.push();
-      //   // score.innerHTML = guessesLeft - 1;
+      //   // score.innerHTML = incorrectGuessesLeft - 1;
       //   console.log(wrongAnswer);
       //   return;
 
