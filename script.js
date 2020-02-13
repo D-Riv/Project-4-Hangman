@@ -9,8 +9,9 @@ let wordsArr = [
   "react",
   "asynchronous"
 ];
-let incorrect = 6;
-
+let guessesLeft = 6;
+let score = document.querySelector(".score");
+score.innerHTML = guessesLeft;
 
 //pick random word from array
 let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
@@ -70,7 +71,7 @@ function restartGame() {
 }
 
 
-//Game logic upon keypad click
+//Game logic upon keypad click(checking for the right answer)
 let letters = document.querySelectorAll(".letter");
 let unknown = document.querySelectorAll(".unknown");
 // let unknownArr = [];
@@ -92,14 +93,25 @@ function click(e) {
     if(e.target.value === spread[i]) {
       unknown[i].innerHTML = e.target.value;
       console.log("It works!"); 
+      }else if (e.target.value !== spread[i]) {
+        guessesLeft = guessesLeft - 1;
+        console.log(guessesLeft);
       }else {
-          console.log("not yet buddy");
+        
       }
     } 
   }
 
+//check for the wrong answer
+// spread.foreach (incorrect);
+// function incorrect () {
+//   if (e.target.value !== spread[i]) {
+    
+//   }
+  
+// }
 
- 
+
 
 
 
