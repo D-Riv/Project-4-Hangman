@@ -2,29 +2,99 @@
   margin: 0;
   padding: 0;
 }
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
 body {
+  font-family: 'Roboto', sans-serif;
   text-align: center;;
+  background-image: url(images/clouds2.jpg);
+	animation: animatedBackground 30s linear infinite;
 }
 header {
-  padding: 50px;
+  padding: 200px;
+  /* padding-top:150px; */
 }
 main {
-  padding: 50px;
+  /* padding: 50px; */
+  z-index: 1;
+
 }
 button {
   margin: 30px;
 }
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.title-page {
+  /* background-color:#7be1ff; */
+  /* width: 560px;  */
+	/* height: 400px;  */
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+.start-button {
+  color: #000000;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+}
+.start-button:hover {
+  transform: scale(1.5); 
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+  }
+}
+.game-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  background-color: #dfae7c;
+  /* width: 100%; */
+  box-sizing: border-box;
+	border: 10px dashed #B25900;
+	border-radius: 2%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  
+}
+
 .display-game {
-  /* display: ; */
-  /* position: fixed; */
-  z-index: 1;
-  /* left: 0%; */
-  /* top: 0; */
+  /* display: none; */
+  position: fixed;
+  left: 0%;
+  top: 0;
   width: 700px;
   height: 600px;
   overflow: auto;
   padding: 50px 100px;
   border: 1px solid #000000;
+  
 }
 .score-name {
   text-align: end;
