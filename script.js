@@ -46,12 +46,18 @@ function keyboard(e) {
   let keycode = e.keyCode;
   let keyPressed = String.fromCharCode(keycode);
   console.log(keyPressed);
+
+  let startButton = document.querySelector(".start-button");
+  startButton.addEventListener("click", slideUp);
+  function slideUp () {
+    document.querySelector(".display-game").style.animation = "5s ease-out 0s 1 slideInFromTop";
+  }
   
   //store correct/incorrect answer into array
   if(randomWordArr.indexOf(keyPressed) > -1) {
     correctAnswers.push(keyPressed);
     underscore[randomWordArr.indexOf(keyPressed)] = keyPressed;
-    underscoreWord[0].innerHTML = underscore.join(" ");
+    underscoreWord.innerHTML = underscore.join(" ");
     console.log(underscore);
 
     if (underscore.join("") == randomWordArr.join("")) {
@@ -60,7 +66,29 @@ function keyboard(e) {
 
   } else {
     incorrectAnswers.push(keyPressed);
-    console.log(incorrectAnswers);
+    console.log(incorrectAnswers.length);
+      
+    // incorrectAnswers.forEach (function (letter) {
+
+    // });
+
+
+
+
+    for (let i = 0; i < incorrectAnswers.length; i++) {
+      if (incorrectAnswers.length > 0) {
+        document.querySelector(".hangman-image").src = "images/head copy.png";
+      } else if (incorrectAnswers.length > 1) {
+        document.querySelector(".hangman-image").src = "images/headtorso copy.png";
+      }
+    }
+   
+     
+        
+        
+     
+      
+    
   }
 }
 
@@ -124,6 +152,10 @@ function click(e) {
     if(e.target.value === randomWordArr[i]) {
       unknown[i].innerHTML = e.target.value;
       console.log("It works!"); 
+      // console.log(underscoreWord);
+      // if (underscoreWord[] == randomWordArr.join("")) {
+      //   alert("you win")
+      // }
       // }else if (e.target.value !== randomWordArr && randomWordArr.indexof(e.target.value) > -1) {
       //   // wrongAnswer.push();
       //   // score.innerHTML = incorrectGuessesLeft - 1;

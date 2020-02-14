@@ -79,9 +79,17 @@ button {
 		transform: translatey(0px);
   }
 }
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .display-game {
   /* display: none; */
-  position: fixed;
+  /* position: fixed; */
   left: 0%;
   top: 0;
   width: 700px;
@@ -89,6 +97,7 @@ button {
   overflow: auto;
   padding: 50px 100px;
   border: 1px solid #000000;
+  /* animation: 5s ease-out 0s 1 slideInFromTop; */
   
 }
 .score-name {
@@ -107,9 +116,11 @@ button {
 .random-word {
   display: flex;
   justify-content: space-evenly;
+  margin: 10px;
+
 }
 .unknown {
-  margin: 10px;
+  margin: 2px;
 }
 
 .keypad {
