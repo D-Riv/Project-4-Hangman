@@ -10,7 +10,8 @@ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;;
   background-image: url(images/clouds2.jpg);
-	animation: animatedBackground 10s linear infinite;
+  animation: animatedBackground 10s linear infinite;
+  /* overflow: hidden; */
 }
 
 button {
@@ -110,7 +111,7 @@ button:hover {
   bottom: -300px;
   /* width: 700px; */
   height: 600px;
-  /* overflow: auto; */
+  overflow: auto;
   padding: 10px 50px 100px 50px;
   margin: 100px;
   border: 5px solid #ffffff;
@@ -172,7 +173,7 @@ button:hover {
   margin: 5px;
 }
 .alert{
-  /* display: none; */
+  display: none;
   font-size: 30px;
   color: #ffffff;
   background-color: #cc0000;

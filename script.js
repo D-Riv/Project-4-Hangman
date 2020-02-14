@@ -9,9 +9,11 @@ let wordsArr = [
 let correctAnswers = [];
 let incorrectAnswers = [];
 let underscore = [];
-let incorrectGuessesLeft = 6;
+let incorrectGuessesLeft = 5;
 let score = document.querySelector(".score");
 score.innerHTML = incorrectGuessesLeft;
+let images = ["images/head copy.png", "images/headtorso copy.png", "images/headtorsoarm copy.png", "images/headtorsoarms copy.png", "images/headtorsoarmsleg copy.png", "images/fullbody.png" ];
+// console.log(images[0])
 
 //generate random word from words array
 let answer = wordsArr[Math.floor(Math.random() * wordsArr.length)];
@@ -48,8 +50,11 @@ function keyboard(e) {
   //activates start button
   let startButton = document.querySelector(".start-button");
   startButton.addEventListener("click", slideUp);
-  function slideUp () {
-    document.querySelector(".display-game").style.animation = "5s ease-out 0s 1 slideInFromBottom";
+  function slideUp (e) {
+    e.preventDefault;
+    document.querySelector(".display-game").style.bottom = "0";
+    document.querySelector(".display-game").style.transition = "background 1.0s linear 0s";
+
   }
   
   //store correct/incorrect answer into array
@@ -67,8 +72,28 @@ function keyboard(e) {
     incorrectAnswers.push(keyPressed);
     // console.log(incorrectAnswers);
     incorrectAnswers.forEach (function (wrongLetter) {
-      score.innerHTML = incorrectGuessesLeft - 1;
-      document.querySelector(".hangman-image").src = "images/head copy.png";
+      
+        console.log(incorrectAnswers.length)
+      if (incorrectAnswers.length == 1) {
+      document.querySelector(".hangman-image").src = images[0];
+      score.innerHTML = 4;
+      } else if (incorrectAnswers.length == 2) {
+        document.querySelector(".hangman-image").src = images[1];
+        score.innerHTML = 3;
+      } else if (incorrectAnswers.length == 3) {
+        document.querySelector(".hangman-image").src = images[3];
+        score.innerHTML = 2;
+      }else if (incorrectAnswers.length == 4) {
+        document.querySelector(".hangman-image").src = images[4];
+        score.innerHTML = 1;
+      }else if (incorrectAnswers.length == 5) {
+        document.querySelector(".hangman-image").src = images[5];
+        score.innerHTML = 0;
+        document.querySelector(".alert").innerHTML = "YOU LOOSE"
+        alert1.style.display = "block";
+
+      }
+
     }) 
     // incorrectAnswers.forEach (function (letter) {
 
