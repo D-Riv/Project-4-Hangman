@@ -11,6 +11,7 @@ let wordsArr = [
 ];
 let correctAnswers = [];
 let incorrectAnswers = [];
+let underscore = [];
 let incorrectGuessesLeft = 6;
 let score = document.querySelector(".score");
 score.innerHTML = incorrectGuessesLeft;
@@ -31,10 +32,13 @@ function randomWord() {
     guessWord.innerHTML = "_"
     let randomWord = document.querySelector(".random-word");
     randomWord.appendChild(guessWord);
+    underscore.push("_");
   }
+  return underscore;
 }
 randomWord();
 
+let underscoreWord = document.querySelector(".random-word");
 
 //initializing keyboard
 document.addEventListener("keypress", keyboard);
@@ -46,20 +50,17 @@ function keyboard(e) {
   //store correct/incorrect answer into array
   if(randomWordArr.indexOf(keyPressed) > -1) {
     correctAnswers.push(keyPressed);
+    underscore[randomWordArr.indexOf(keyPressed)] = keyPressed;
+    underscoreWord[0].innerHTML = underscore.join(" ");
+    console.log(underscore);
 
-    // correctAnswers.forEach(function (letter) {
-    //   if (letter === keyPressed) {
-
-    //   }
-    // });
-    let underscore = document.querySelectorAll(".unknown");
-    for(let i = 0; i < underscore.length; i++) {
-    console.log(underscore[i]);
-      
+    if (underscore.join("") == randomWordArr.join("")) {
+      alert("you win")
     }
+
   } else {
-    wrongAnswer.push(keyPressed);
-    console.log(wrongAnswer);
+    incorrectAnswers.push(keyPressed);
+    console.log(incorrectAnswers);
   }
 }
 
