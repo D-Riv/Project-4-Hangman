@@ -65,22 +65,27 @@ function keyboard(e) {
 
   } else {
     incorrectAnswers.push(keyPressed);
-    console.log(incorrectAnswers.length);
-      
+    // console.log(incorrectAnswers);
+    incorrectAnswers.forEach (function (wrongLetter) {
+      score.innerHTML = incorrectGuessesLeft - 1;
+      document.querySelector(".hangman-image").src = "images/head copy.png";
+    }) 
     // incorrectAnswers.forEach (function (letter) {
 
     // });
 
 
+    // console.log(randomWordArr);
 
-
-    for (let i = 0; i < incorrectAnswers.length; i++) {
-      if (incorrectAnswers.length > 0) {
-        document.querySelector(".hangman-image").src = "images/head copy.png";
-      } else if (incorrectAnswers.length > 1) {
-        document.querySelector(".hangman-image").src = "images/headtorso copy.png";
-      }
-    }
+    // for (let i = 0; i < randomWordArr.length; i++) {
+    //   console.log(randomWordArr[i]);
+    //   if (keyPressed !== randomWordArr[i]) {
+    //     
+    //   }
+      // } else if (incorrectAnswers.length > 1) {
+      //   document.querySelector(".hangman-image").src = "images/headtorso copy.png";
+      // }
+    // }
    
      
         
