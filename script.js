@@ -4,8 +4,7 @@ let wordsArr = [
   "git",
   "grid",
   "react",
-  "codinganimal",
-  "test"
+  "codinganimal"
 ];
 let correctAnswers = [];
 let incorrectAnswers = [];
@@ -37,6 +36,7 @@ function randomWord() {
 randomWord();
 
 let underscoreWord = document.querySelector(".random-word");
+let alert1 = document.querySelector(".alert");
 
 //initializing keyboard
 document.addEventListener("keypress", keyboard);
@@ -60,7 +60,7 @@ function keyboard(e) {
     console.log(underscore);
 
     if (underscore.join("") == randomWordArr.join("")) {
-      alert("you win")
+      alert1.style.display = "block";
     }
 
   } else {
