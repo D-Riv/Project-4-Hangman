@@ -3,14 +3,14 @@
   padding: 0;
 }
 @keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
 }
 body {
   font-family: 'Roboto', sans-serif;
   text-align: center;;
   background-image: url(images/clouds2.jpg);
-	animation: animatedBackground 30s linear infinite;
+	animation: animatedBackground 10s linear infinite;
 }
 
 button {
@@ -80,7 +80,7 @@ button {
   }
 }
 .display-game {
-  display: none;
+  /* display: none; */
   position: fixed;
   left: 0%;
   top: 0;

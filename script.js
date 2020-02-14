@@ -22,12 +22,7 @@ let randomWordArr = answer.split("")
 console.log(randomWordArr);
 
 
-
-
-
-
-
-//generate hidden word length character into "_"
+//generate hidden word length character into underscore
 function randomWord() {
   for(let i = 0; i < randomWordArr.length; i++) {
     let guessWord = document.createElement("p");
@@ -40,6 +35,33 @@ function randomWord() {
 }
 randomWord();
 
+
+//initializing keyboard
+document.addEventListener("keypress", keyboard);
+function keyboard(e) {
+  let keycode = e.keyCode;
+  let keyPressed = String.fromCharCode(keycode);
+  console.log(keyPressed);
+  
+  //store correct/incorrect answer into array
+  if(randomWordArr.indexOf(keyPressed) > -1) {
+    correctAnswers.push(keyPressed);
+
+    // correctAnswers.forEach(function (letter) {
+    //   if (letter === keyPressed) {
+
+    //   }
+    // });
+    let underscore = document.querySelectorAll(".unknown");
+    for(let i = 0; i < underscore.length; i++) {
+    console.log(underscore[i]);
+      
+    }
+  } else {
+    wrongAnswer.push(keyPressed);
+    console.log(wrongAnswer);
+  }
+}
 
 //Ability to initialize and remove keypad
 let keypadInit = document.querySelector(".keypad-activator");
@@ -58,6 +80,7 @@ function generateButtons() {
 }
 generateButtons();
 
+//Display keypad
 keypadInit.addEventListener("click", generateDisplay);
 function generateDisplay() {
   let keypad = document.querySelector(".keypad");
@@ -89,8 +112,6 @@ let unknown = document.querySelectorAll(".unknown");
 // unknownArr.push(randomWordArr[i]);
 // }
 // console.log(unknownArr);
-
-let wrongAnswer = [];
 
 for(let i = 0; i < letters.length; i++) {
   letters[i].addEventListener("click", click);
