@@ -43,7 +43,7 @@ button:hover {
 .container {
   /* background-color:#7be1ff; */
   /* width: 560px;  */
-	/* height: 400px;  */
+  /* height: 400px;  */
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
   animation: 5s ease-out 0s 1 slideInFromTop;
@@ -129,7 +129,7 @@ button:hover {
   /* width: 700px; */
   height: 600px;
   /* overflow: auto; */
-  padding: 10px 50px 100px 50px;
+  padding: 10px 50px 250px 50px;
   margin: 100px;
   border: 5px solid #ffffff;
   /* animation: 5s ease-out 0s 1 slideInFromBottom; */
@@ -166,8 +166,8 @@ button:hover {
   /* flex-direction: column; */
 }
 .hangman-image {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   /* margin-right: 30px; */
   background-color: #c1cdc1;
   border: 5px solid #ffffff;
@@ -179,7 +179,7 @@ button:hover {
 }
 .random-word {
   display: flex;
-  font-size: 50px;
+  font-size: 60px;
   justify-content: space-evenly;
   margin: 10px 30px 250px 10px;
   padding: 50px;
@@ -223,4 +223,90 @@ button:hover {
   animation: float 6s ease-in-out infinite;
 
 }
+@media only screen and (max-width: 568px) {
+  .game-title {
+    
+    font-size: 30px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    /* padding: 100px; */
+    margin: 100px 0 0 30px ;
+    /* overflow: hidden; */
+   
+    
+  }
+  .game-title2 {
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin: 30px 0 0 30px ;
 
+    /* margin: 150px 100px 0 100px; */
+    /* padding-right: 20px; */
+    /* overflow: hidden; */
+  }
+  .start-button {
+    margin: 30px 0 0 30px ;
+  }
+  .display-game {
+   
+    position: relative;
+    background: rgba(42,79,143, 0.3);
+    height: 600px;
+    
+    padding: 1px 10px 100px 10px;
+    margin: 10px;
+   
+    /* animation: 5s ease-out 0s 1 slideInFromBottom; */
+    
+  }
+  .score-name {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+    margin-bottom: 100px;
+  }
+  .underscore-greet {
+    font-size: 20px;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+  }
+  .main-game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-direction: column; */
+  }
+  .hangman-image {
+    width: 50px;
+    height: 50px;
+    padding: 50px;
+  }
+  .random-word {
+    
+    font-size: 20px;
+    
+    margin: 10px 30px 50px 10px;
+    padding: 10px;
+    
+  
+  }
+  .keypad-activator {
+    margin: 0;
+    font-size: 10px;
+  }
+  .alert{
+    font-size: 10px;
+   
+    padding: 10px;
+    
+  
+  }
+  .restart {
+    font-size: 10px;
+  }
+}

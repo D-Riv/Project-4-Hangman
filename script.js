@@ -77,15 +77,23 @@ function keyboard(e) {
       if (incorrectAnswers.length == 1) {
       document.querySelector(".hangman-image").src = images[0];
       score.innerHTML = 4;
+      document.querySelector(".alert").innerHTML = "Oof, you can still do this"
+        alert1.style.display = "block";
       } else if (incorrectAnswers.length == 2) {
         document.querySelector(".hangman-image").src = images[1];
         score.innerHTML = 3;
+        document.querySelector(".alert").innerHTML = "Not looking to bright"
+        alert1.style.display = "block";
       } else if (incorrectAnswers.length == 3) {
         document.querySelector(".hangman-image").src = images[3];
         score.innerHTML = 2;
+        document.querySelector(".alert").innerHTML = "Rip"
+        alert1.style.display = "block";
       }else if (incorrectAnswers.length == 4) {
         document.querySelector(".hangman-image").src = images[4];
         score.innerHTML = 1;
+        document.querySelector(".alert").innerHTML = "Tell my family I love them"
+        alert1.style.display = "block";
       }else if (incorrectAnswers.length == 5) {
         document.querySelector(".hangman-image").src = images[5];
         score.innerHTML = 0;
