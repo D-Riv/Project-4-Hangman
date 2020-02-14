@@ -1,13 +1,11 @@
 //Array of random words
 let wordsArr = [
-  "javascript",
   "github",
   "git",
-  "responsive",
-  "flexbox",
   "grid",
   "react",
-  "asynchronous"
+  "codinganimal",
+  "test"
 ];
 let correctAnswers = [];
 let incorrectAnswers = [];
@@ -47,10 +45,11 @@ function keyboard(e) {
   let keyPressed = String.fromCharCode(keycode);
   console.log(keyPressed);
 
+  //activates start button
   let startButton = document.querySelector(".start-button");
   startButton.addEventListener("click", slideUp);
   function slideUp () {
-    document.querySelector(".display-game").style.animation = "5s ease-out 0s 1 slideInFromTop";
+    document.querySelector(".display-game").style.animation = "5s ease-out 0s 1 slideInFromBottom";
   }
   
   //store correct/incorrect answer into array
