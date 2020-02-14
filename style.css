@@ -64,6 +64,22 @@ button:hover {
   animation: float 6s ease-in-out infinite;
   
 }
+.game-title2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  background-color: #dfae7c;
+  margin: 50px 100px 0 100px;
+  padding: 10px;
+  box-sizing: border-box;
+	border: 10px dashed #B25900;
+	border-radius: 2%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  
+}
 .start-button {
   color: #000000;
   font-size: 20px;
@@ -106,17 +122,22 @@ button:hover {
 .display-game {
   /* display: none; */
   position: relative;
+  background: rgba(42,79,143, 0.3);
   /* left: 0%; */
   /* top: 0; */
   bottom: -300px;
   /* width: 700px; */
   height: 600px;
-  overflow: auto;
+  /* overflow: auto; */
   padding: 10px 50px 100px 50px;
   margin: 100px;
   border: 5px solid #ffffff;
   /* animation: 5s ease-out 0s 1 slideInFromBottom; */
   
+}
+.direct {
+  display: flex;
+  justify-content: space-between;
 }
 .score-name {
   border: 1px solid #ffffff;
@@ -125,6 +146,16 @@ button:hover {
   text-align: center;
   width: 150px;
   margin-bottom: 50px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+.underscore-greet {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
@@ -148,8 +179,15 @@ button:hover {
 }
 .random-word {
   display: flex;
+  font-size: 50px;
   justify-content: space-evenly;
-  margin: 10px 30px 10px 10px;
+  margin: 10px 30px 250px 10px;
+  padding: 50px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
 
 }
 .unknown {
