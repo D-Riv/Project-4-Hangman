@@ -125,7 +125,7 @@ button:hover {
   background: rgba(42,79,143, 0.3);
   /* left: 0%; */
   /* top: 0; */
-  bottom: -300px;
+  bottom: -100%;
   /* width: 700px; */
   height: 600px;
   /* overflow: auto; */
@@ -133,7 +133,8 @@ button:hover {
   margin: 100px;
   border: 5px solid #ffffff;
   /* animation: 5s ease-out 0s 1 slideInFromBottom; */
-  
+  transition: all 2s linear;
+  transition-delay: .2s;
 }
 .direct {
   display: flex;

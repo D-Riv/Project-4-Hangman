@@ -48,14 +48,18 @@ function keyboard(e) {
   console.log(keyPressed);
 
   //activates start button
+  let start = document.querySelector(".display-game");
   let startButton = document.querySelector(".start-button");
-  startButton.addEventListener("click", slideUp);
-  function slideUp (e) {
-    e.preventDefault;
-    document.querySelector(".display-game").style.bottom = "0";
-    document.querySelector(".display-game").style.transition = "background 1.0s linear 0s";
+  startButton.addEventListener("click", function (e) {
+    // e.preventDefault;
+    console.log(e);
+    // start.style.bottom = "0";
+  });
+  // function slideUp (e) {
+    
+    // document.querySelector(".display-game").style.transition = "background 1.0s linear 0s"
 
-  }
+  // }
   
   //store correct/incorrect answer into array
   if(randomWordArr.indexOf(keyPressed) > -1) {
