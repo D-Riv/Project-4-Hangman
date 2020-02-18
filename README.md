@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# Project-4-Hangman
+This is a project built from everything we have learned in unit 1. Throughout this project the tools that were used are HTML, CSS, and JavaScript. Through each tool the site was developed utilizing semantic markup, CSS animations/responsive design, and DOM minipulation. The game is built around the famously known game hangman. 
 
-You can use the [editor on GitHub](https://github.com/D-Riv/Project-4-Hangman/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Prerequisites ###
+* Browser
+* Google Chrome (preferably)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### __No Installation Required__ ###
 
-### Markdown
+### Deployment ###
+To deploy the portfolio project utilize the link below.
+[Use this link to my project!](https://d-riv.github.io/Project-4-Hangman/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Built With ###
+* HTML5
+* CSS3
+* JS
 
-```markdown
-Syntax highlighted code block
+### Contributing ###
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to me.
 
-# Header 1
-## Header 2
-### Header 3
+### Versioning ###
+We use git/github for version control.For other versions check the repository. :)
 
-- Bulleted
-- List
+### Authors ###
+Dennis A. Rivera
 
-1. Numbered
-2. List
+### License ###
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/D-Riv/Project-4-Hangman/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Acknowledgments ###
+* SEI35
+* GA 
