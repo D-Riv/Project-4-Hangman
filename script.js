@@ -50,10 +50,13 @@ function keyboard(e) {
   //activates start button
   let start = document.querySelector(".display-game");
   let startButton = document.querySelector(".start-button");
+
+  console.log(start);
+
   startButton.addEventListener("click", function (e) {
     // e.preventDefault;
-    console.log(e);
-    // start.style.bottom = "0";
+    console.log("works");
+    start.style.bottom = "0";
   });
   // function slideUp (e) {
     
@@ -170,6 +173,7 @@ restart.addEventListener("click", restartGame);
 function restartGame() {
   location.reload(displayGame);
 }
+
 
 
 //Game logic upon keypad click(checking for the right answer)
