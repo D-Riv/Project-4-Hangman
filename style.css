@@ -8,10 +8,12 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
-  text-align: center;;
+  text-align: center;
   background-image: url(images/clouds2.jpg);
   animation: animatedBackground 10s linear infinite;
-  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  overflow: none;
 }
 
 button {
@@ -53,8 +55,9 @@ button:hover {
   color: #ffffff;
   font-size: 110px;
   background-color: #dfae7c;
-  margin: 150px 100px 0 100px;
-  padding: 50px;
+  width: 100%;
+  margin-top: 150px;
+  padding: 70px 150px;
   box-sizing: border-box;
 	border: 10px dashed #B25900;
 	border-radius: 2%;
@@ -69,8 +72,11 @@ button:hover {
   color: #ffffff;
   font-size: 50px;
   background-color: #dfae7c;
-  margin: 50px 100px 0 100px;
+  margin-top: 100px;
+
   padding: 10px;
+  width: 100%;
+
   box-sizing: border-box;
 	border: 10px dashed #B25900;
 	border-radius: 2%;
@@ -89,9 +95,9 @@ button:hover {
   border: 1px solid #ffffff;
   background-color: #ffffff;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  transform: translatey(0px);
+  /* transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-  
+   */
 }
 .start-button:hover {
   transform: scale(1.5);
@@ -120,21 +126,21 @@ button:hover {
   }
 }
 .display-game {
-  /* display: none; */
-  position: relative;
+  display: none;
+  position: absolute;
   background: rgba(42,79,143, 0.3);
   /* left: 0%; */
-  /* top: 0; */
-  bottom: -100%;
-  /* width: 700px; */
-  height: 600px;
-  /* overflow: auto; */
+  top: 0;
+  /* bottom: -100%; */
+  width: 50%;
+  height: 50%;
+  overflow: none;
   padding: 10px 50px 250px 50px;
-  margin: 100px;
+  margin-top: 40px;
   border: 5px solid #ffffff;
   /* animation: 5s ease-out 0s 1 slideInFromBottom; */
-  transition: all 2s linear;
-  transition-delay: .2s;
+  /* transition: all 2s linear;
+  transition-delay: .2s; */
 }
 .direct {
   display: flex;
@@ -216,7 +222,7 @@ button:hover {
   font-size: 30px;
   color: #ffffff;
   background-color: #cc0000;
-  padding: 50px;
+  padding: 20px;
   z-index: 5;
   border: 5px solid #ffffff;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);

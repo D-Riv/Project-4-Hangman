@@ -47,17 +47,7 @@ function keyboard(e) {
   let keyPressed = String.fromCharCode(keycode);
   console.log(keyPressed);
 
-  //activates start button
-  let start = document.querySelector(".display-game");
-  let startButton = document.querySelector(".start-button");
-
-  console.log(start);
-
-  startButton.addEventListener("click", function (e) {
-    // e.preventDefault;
-    console.log("works");
-    start.style.bottom = "0";
-  });
+  
   // function slideUp (e) {
     
     // document.querySelector(".display-game").style.transition = "background 1.0s linear 0s"
@@ -106,6 +96,7 @@ function keyboard(e) {
         score.innerHTML = 0;
         document.querySelector(".alert").innerHTML = "YOU LOOSE"
         alert1.style.display = "block";
+        document.removeEventListener("keypress",keyboard)
 
       }
 
@@ -135,6 +126,16 @@ function keyboard(e) {
     
   }
 }
+//activates start button
+let startGame = document.querySelector(".display-game");
+let startButton = document.querySelector(".start-button");
+
+
+startButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("works");
+  startGame.style.display = "block";
+});
 
 //Ability to initialize and remove keypad
 let keypadInit = document.querySelector(".keypad-activator");
