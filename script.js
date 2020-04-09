@@ -96,11 +96,14 @@ function keyboard(e) {
 //activates start button
 let startGame = document.querySelector(".display-game");
 let startButton = document.querySelector(".start-button");
+let homePage = document.querySelector(".container");
 
 startButton.addEventListener("click", function (e) {
   e.preventDefault();
-  // console.log("works");
-  startGame.style.display = "block";
+  startGame.classList.remove("display-game");
+  startGame.classList.add("animate-display-game");
+  homePage.classList.remove("container");
+  homePage.classList.add("animate-container");
 });
 
 //Ability to initialize and remove keypad

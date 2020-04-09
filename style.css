@@ -46,14 +46,28 @@ button:hover {
     transform: translateY(0);
   }
 }
+
 .container {
-  /* background-color:#7be1ff; */
-  /* width: 560px;  */
-  /* height: 400px;  */
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: 5s ease-out 0s 1 slideInFromTop;
 }
+.animate-container {
+  animation: 5s ease-out 0s 1 slideUp;
+  top: -100%;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+
 .game-title {
   text-align: center;
   color: #ffffff;
@@ -132,17 +146,36 @@ button:hover {
   position: absolute;
   background: rgba(42, 79, 143, 0.3);
   /* left: 0%; */
-  top: 0;
-  /* bottom: -100%; */
+  /* top: 0; */
+  bottom: -100%;
   width: 50%;
   height: 50%;
   overflow: none;
   padding: 10px 50px 250px 50px;
   margin-top: 40px;
   border: 5px solid #ffffff;
-  /* animation: 5s ease-out 0s 1 slideInFromBottom; */
-  /* transition: all 2s linear;
-  transition-delay: .2s; */
+}
+
+.animate-display-game {
+  /* display: none; */
+  position: absolute;
+  background: rgba(42, 79, 143, 0.3);
+  /* left: 0%; */
+  /* top: 0; */
+  bottom: -100%;
+  width: 50%;
+  height: 50%;
+  overflow: none;
+  padding: 10px 50px 250px 50px;
+  margin-top: 40px;
+  border: 5px solid #ffffff;
+  -webkit-animation: slide 5s forwards;
+}
+
+@keyframes slide {
+  100% {
+    bottom: 150px;
+  }
 }
 .direct {
   display: flex;
@@ -190,7 +223,7 @@ button:hover {
 .random-word {
   display: flex;
   font-size: 30px;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 20px 30px 150px 10px;
   padding: 30px 10px;
   width: 50%;
