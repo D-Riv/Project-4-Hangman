@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <title>Hangman</title>
-</head>
-<body>
-  <header class="container">
-    <h1 class="game-title">Hangman</h1>
-    <h4 class="game-title2">Will You Survive?</h4>
-    <button class="start-button">Start Game</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="game-title">Hangman</h1>
+      <h4 class="game-title2">Will You Survive?</h4>
+      <button class="start-button">Start Game</button>
+    </header>
     <!-- <form action="">
       <label for="name">Username: </label>
       <input type="text" id="name">
@@ -20,23 +23,28 @@
     <main class="display-game">
       <h1 class="alert">YOU WIN YAY!</h1>
       <div class="direct">
-        <h2 class="score-name">Tries Left: <span class="score"></span> </h2>
-      <h2 class="underscore-greet">Guess the word! Hit a key on the keyboard!</h2>
+        <h2 class="score-name">Tries Left: <span class="score"></span></h2>
+        <h2 class="underscore-greet">
+          Guess the word! Hit a key on the keyboard!
+        </h2>
       </div>
-      
+
       <div class="main-game">
         <div class="hangman-images">
-          <img class="hangman-image" src="./images/hangmanpolecopy.png" alt="hangman-pole">
+          <img
+            class="hangman-image"
+            src="./images/hangmanpolecopy.png"
+            alt="hangman-pole"
+          />
         </div>
         <div class="random-word"></div>
       </div>
-      
 
       <div class="keypad"></div>
       <button class="keypad-activator">Keypad</button>
 
       <button class="restart">Restart</button>
     </main>
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
