@@ -3,17 +3,21 @@
   padding: 0;
 }
 @keyframes animatedBackground {
-	from { background-position: 100% 0; }
-	to { background-position: 0 0; }
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   background-image: url(images/clouds2.jpg);
   animation: animatedBackground 10s linear infinite;
   display: flex;
   justify-content: center;
-  overflow: none;
+  overflow: hidden;
 }
 
 button {
@@ -24,7 +28,7 @@ button {
   cursor: pointer;
   border: 1px solid #ffffff;
   background-color: #ffffff;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   margin: 30px;
@@ -32,7 +36,7 @@ button {
 }
 button:hover {
   transform: scale(1.5);
-  background-color: gray; 
+  background-color: gray;
 }
 @keyframes slideInFromTop {
   0% {
@@ -46,8 +50,8 @@ button:hover {
   /* background-color:#7be1ff; */
   /* width: 560px;  */
   /* height: 400px;  */
-	background-position: 0px 0px;
-	background-repeat: repeat-x;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
   animation: 5s ease-out 0s 1 slideInFromTop;
 }
 .game-title {
@@ -59,13 +63,12 @@ button:hover {
   margin-top: 150px;
   padding: 70px 150px;
   box-sizing: border-box;
-	border: 10px dashed #B25900;
-	border-radius: 2%;
-	overflow: hidden;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	transform: translatey(0px);
+  border: 10px dashed #b25900;
+  border-radius: 2%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-  
 }
 .game-title2 {
   text-align: center;
@@ -78,13 +81,12 @@ button:hover {
   width: 100%;
 
   box-sizing: border-box;
-	border: 10px dashed #B25900;
-	border-radius: 2%;
-	overflow: hidden;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	transform: translatey(0px);
+  border: 10px dashed #b25900;
+  border-radius: 2%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-  
 }
 .start-button {
   color: #000000;
@@ -94,27 +96,27 @@ button:hover {
   cursor: pointer;
   border: 1px solid #ffffff;
   background-color: #ffffff;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   /* transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
    */
 }
 .start-button:hover {
   transform: scale(1.5);
-  background-color: gray; 
+  background-color: gray;
 }
 @keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
 }
 @keyframes slideInFromBottom {
@@ -128,7 +130,7 @@ button:hover {
 .display-game {
   display: none;
   position: absolute;
-  background: rgba(42,79,143, 0.3);
+  background: rgba(42, 79, 143, 0.3);
   /* left: 0%; */
   top: 0;
   /* bottom: -100%; */
@@ -153,7 +155,7 @@ button:hover {
   text-align: center;
   width: 150px;
   margin-bottom: 50px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
 }
@@ -163,13 +165,14 @@ button:hover {
   padding: 20px;
   text-align: center;
   width: 150px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
 }
 .main-game {
   display: flex;
   justify-content: space-evenly;
+  height: 80%;
   /* flex-direction: column; */
 }
 .hangman-image {
@@ -180,7 +183,7 @@ button:hover {
   border: 5px solid #ffffff;
   border-radius: 50%;
   padding: 50px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
 }
@@ -188,14 +191,13 @@ button:hover {
   display: flex;
   font-size: 60px;
   justify-content: space-evenly;
-  margin: 10px 30px 250px 10px;
+  margin: 10px 30px 150px 10px;
   padding: 50px;
   border: 5px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-
 }
 .unknown {
   margin: 2px;
@@ -212,12 +214,12 @@ button:hover {
   cursor: pointer;
   border: 1px solid #ffffff;
   background-color: #ffffff;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   margin: 5px;
 }
-.alert{
+.alert {
   display: none;
   font-size: 30px;
   color: #ffffff;
@@ -225,49 +227,43 @@ button:hover {
   padding: 20px;
   z-index: 5;
   border: 5px solid #ffffff;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-
 }
 @media only screen and (max-width: 568px) {
   .game-title {
-    
     font-size: 30px;
     height: auto;
     width: auto;
     text-align: center;
     /* padding: 100px; */
-    margin: 100px 0 0 30px ;
+    margin: 100px 0 0 30px;
     /* overflow: hidden; */
-   
-    
   }
   .game-title2 {
     font-size: 20px;
     height: auto;
     width: auto;
     text-align: center;
-    margin: 30px 0 0 30px ;
+    margin: 30px 0 0 30px;
 
     /* margin: 150px 100px 0 100px; */
     /* padding-right: 20px; */
     /* overflow: hidden; */
   }
   .start-button {
-    margin: 30px 0 0 30px ;
+    margin: 30px 0 0 30px;
   }
   .display-game {
-   
     position: relative;
-    background: rgba(42,79,143, 0.3);
+    background: rgba(42, 79, 143, 0.3);
     height: 600px;
-    
+
     padding: 1px 10px 100px 10px;
     margin: 10px;
-   
+
     /* animation: 5s ease-out 0s 1 slideInFromBottom; */
-    
   }
   .score-name {
     font-size: 20px;
@@ -288,30 +284,25 @@ button:hover {
     flex-direction: column;
     /* flex-direction: column; */
   }
-  .hangman-image {
+  .hangman-images {
     width: 50px;
     height: 50px;
     padding: 50px;
   }
   .random-word {
-    
     font-size: 20px;
-    
+
     margin: 10px 30px 50px 10px;
     padding: 10px;
-    
-  
   }
   .keypad-activator {
     margin: 0;
     font-size: 10px;
   }
-  .alert{
+  .alert {
     font-size: 10px;
-   
+
     padding: 10px;
-    
-  
   }
   .restart {
     font-size: 10px;

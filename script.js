@@ -143,53 +143,48 @@ function restartGame() {
 //Game logic upon keypad click(checking for the right answer)
 let letters = document.querySelectorAll(".letter");
 let unknown = document.querySelectorAll(".unknown");
-let eventArrary = [];
-let incorrectInput = 0;
 
 letters.forEach((letter) => {
-  letter.addEventListener("click", function (e) {
-    console.log(e.target.value);
-
-    for (let i = 0; i < randomWordArr.length; i++) {
-      if (e.target.value == randomWordArr[i]) {
-        unknown[i].innerHTML = e.target.value;
-        // console.log("It works!");
-        console.log(randomWordArr[i]);
-        // console.log(e.target.value);
-        break;
-      } else if (e.target.value != randomWordArr[i]) {
-        incorrectAnswers.push(e.target.value);
-        console.log(incorrectAnswers);
-        break;
-      }
-    }
-
-    if (incorrectAnswers.length == 1) {
-      document.querySelector(".hangman-image").src = images[0];
-      score.innerHTML = 4;
-      document.querySelector(".alert").innerHTML = "Oof, you can still do this";
-      alert1.style.display = "block";
-    } else if (incorrectAnswers.length == 2) {
-      document.querySelector(".hangman-image").src = images[1];
-      score.innerHTML = 3;
-      document.querySelector(".alert").innerHTML = "Not looking to bright";
-      alert1.style.display = "block";
-    } else if (incorrectAnswers.length == 3) {
-      document.querySelector(".hangman-image").src = images[3];
-      score.innerHTML = 2;
-      document.querySelector(".alert").innerHTML = "Rip";
-      alert1.style.display = "block";
-    } else if (incorrectAnswers.length == 4) {
-      document.querySelector(".hangman-image").src = images[4];
-      score.innerHTML = 1;
-      document.querySelector(".alert").innerHTML = "Tell my family I love them";
-      alert1.style.display = "block";
-    } else if (incorrectAnswers.length == 5) {
-      document.querySelector(".hangman-image").src = images[5];
-      score.innerHTML = 0;
-      document.querySelector(".alert").innerHTML = "YOU LOOSE";
-      alert1.style.display = "block";
-      document.removeEventListener("keypress", keyboard);
-    }
-  });
+  letter.addEventListener("click", keypadInput);
 });
+
+function keypadInput(e) {
+  console.log(e.target.value);
+
+  if (randomWordArr.indexOf(e.target.value) > -1) {
+    correctAnswers.push(e.target.value);
+    underscore[randomWordArr.indexOf(e.target.value)] = e.target.value;
+    underscoreWord.innerHTML = underscore.join(" ");
+  } else {
+    incorrectAnswers.push(e.target.value);
+  }
+  console.log(incorrectAnswers);
+
+  if (incorrectAnswers.length == 1) {
+    document.querySelector(".hangman-image").src = images[0];
+    score.innerHTML = 4;
+    document.querySelector(".alert").innerHTML = "Oof, you can still do this";
+    alert1.style.display = "block";
+  } else if (incorrectAnswers.length == 2) {
+    document.querySelector(".hangman-image").src = images[1];
+    score.innerHTML = 3;
+    document.querySelector(".alert").innerHTML = "Not looking to bright";
+    alert1.style.display = "block";
+  } else if (incorrectAnswers.length == 3) {
+    document.querySelector(".hangman-image").src = images[3];
+    score.innerHTML = 2;
+    document.querySelector(".alert").innerHTML = "Rip";
+    alert1.style.display = "block";
+  } else if (incorrectAnswers.length == 4) {
+    document.querySelector(".hangman-image").src = images[4];
+    score.innerHTML = 1;
+    document.querySelector(".alert").innerHTML = "Tell my family I love them";
+    alert1.style.display = "block";
+  } else if (incorrectAnswers.length == 5) {
+    document.querySelector(".hangman-image").src = images[5];
+    score.innerHTML = 0;
+    document.querySelector(".alert").innerHTML = "YOU LOOSE";
+    alert1.style.display = "block";
+    document.removeEventListener("click", keypadInput);
+  }
+}
